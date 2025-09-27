@@ -29,8 +29,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <update id="update">
         UPDATE board
            SET title = #{title}
+              ,writer = #{writer}
               ,content = #{content}
-              ,upd_date = now()
+              ,updated_at = now()
         WHERE no = #{no}
     </update>
 

@@ -6,6 +6,45 @@
     <title>상세페이지</title>
 </head>
 <body>
-    
+<h1>게시글 조회</h1>
+    <form action="/boards/delete" method="post">
+        <input type="hidden" name="no" id="no" th:value="${board.no}">
+        <table>
+            <tr>
+                <td>제목</td>
+                <td>
+                    <input type="text" id="title" name="title" th:value="${board.title}">
+                </td>
+            </tr>
+            <tr>
+                <td>작성자</td>
+                <td>
+                    <input type="text" id="writer" name="writer" th:value="${board.writer}">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="text" id="content" name="content" th:value="${board.content}">
+                </td>
+            </tr>
+        </table>
+        <div>
+            <button type="button" onclick="moveUpdate()">수정</button>
+            <button type="button" onclick="moveList()">목록</button>
+        </div>
+    </form>
+
+    <script>
+        let no = '[[${board.no}]]'
+
+
+        function moveUpdate() {
+            location.href = '/boards/update?no=' + no
+        }
+
+        function moveList() {
+            location.href = '/boards/list'
+        }
+    </script>
 </body>
 </html>
