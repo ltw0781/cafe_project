@@ -20,7 +20,6 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public List<Board> list() throws Exception {
 
-        // TODO Auto-generated method stub
         List<Board> boardList = boardMapper.list();
         return boardList;
 
@@ -29,25 +28,22 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public Board select(int no) throws Exception {
 
-        // TODO Auto-generated method stub
         Board board = boardMapper.select(no);
         return board;
 
     }
 
     @Override
-    public Board insert(Board board) throws Exception {
+    public int insert(Board board) throws Exception {
+
         int result = boardMapper.insert(board);
-        log.info("result : " + result);
-        int newNo = board.getNo();
-        Board newBoard = boardMapper.select(newNo);
-        return newBoard;
+        return result;
+        
     }
 
     @Override
     public int update(Board board) throws Exception {
 
-        // TODO Auto-generated method stub
         int result = boardMapper.update(board);
         return result;
 
@@ -56,7 +52,6 @@ public class BoardServiceImpl implements BoardService{
     @Override
     public int delete(int no) throws Exception {
 
-        // TODO Auto-generated method stub
         int result = boardMapper.delete(no);
         return result;
 

@@ -3,9 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>게시글 작성</title>
 </head>
 <body>
-    
+    <h1>게시글 등록</h1>
+    <form action="/boards/insert" method="post">
+        <input type="text" id="title" name="title">
+        <input type="text" id="writer" name="writer">
+        <input type="text" id="content" name="content">
+        <input type="submit" value="등록">
+    </form>
 </body>
 </html>
