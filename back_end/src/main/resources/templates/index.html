@@ -6,17 +6,29 @@
     <link href="/css/reset.css" rel="stylesheet">
     <title>게시판 홈</title>
 </head>
-<body layout:fragment="content">
+<body>
 
-    <div>
+    <header class="header">
+        <div class="logoL">
+            <h1 class="logo"><a href="/"><img src="" alt="로고 이미지"></a></h1>
+        </div>
+        <div class="utilR">
+            <ul>
+                <li><a href="#none">로그인</a></li>
+                <li><a href="#none">마이페이지</a></li>
+                <li><a href="#none">고객센터</a></li>
+            </ul>
+        </div>
+    </header>
+    <nav class="gnb">
         <ul>
-            <li><a href="">dsfsdf</a></li>
-            <li><a href="">sdfsdf</a></li>
-            <li><a href="">sdfsdf</a></li>
+            <li><a href="#none">소개페이지</a></li>
+            <li><a href="#none">메뉴소개</a></li>
+            <li><a href="#none">공지사항</a></li>
+            <li><a href="/boards/list">게시판</a></li>
+            <li><a href="#none">Q&A</a></li>
         </ul>
-    </div>
-    <h1>게시판 홈</h1>
-    <a href="/boards/list">게시판 목록</a>
+    </nav>
 
 </body>
 </html>
