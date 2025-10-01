@@ -129,7 +129,7 @@ public class BoardController {
         int result = boardService.delete(no);
 
 
-        if(result >0) {
+        if(result > 0) {
             return "redirect:/boards/list";
         }
 

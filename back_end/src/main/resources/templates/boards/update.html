@@ -46,13 +46,15 @@
         }
 
         function actionDelete() {
-            let check
-            if (check) {
-                action.confirm("정말로 삭제하시겠습니까?")
-                action.submit()
-                
-            }
+
+            if( !confirm('정말로 삭제하시겠습니까?') )
+                return
+            
+            form.action = '/board/delete'   // action 속성 변경
+            form.submit()                   // 요청 전송
+
         }
+        
 
         function moveList() {
             location.href = '/boards/list'
