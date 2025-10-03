@@ -28,17 +28,25 @@
 
 
 /* 네비게이션 영역 */
-nav.gnb {}
+nav.gnb {
+    width: 100%;
+    padding: 20px 0;
 
-nav.gnb .inner {}
+}
+
+nav.gnb .inner {
+    background-color: yellow;
+}
 
 nav.gnb .inner ul {
     display: flex;
+    justify-content: space-around;
     flex-direction: row;
-    
 }
 
-nav.gnb .inner ul li {}
+nav.gnb .inner ul li {
+    align-self: center;
+}
 
 nav.gnb .inner ul li a {}
 
@@ -48,11 +56,19 @@ nav.gnb .inner ul li a {}
 
 .container .inner {}
 
-.container .inner .slide {}
+.container .inner .slide {
+    width: 100%;
+    overflow: hidden;
+}
 
-.container .inner .slide a {}
+.container .inner .slide a {
+    display: block;
+}
 
-.container .inner .slide a img {}
+.container .inner .slide a img {
+    width: 1000px;
+    height: 800px;
+}
 
 
 
