@@ -1,0 +1,73 @@
+/* 공통 영역 */
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* 헤더 영역 */
+.header {}
+
+.header .inner {}
+
+.header .inner .logoL {}
+
+.header .inner .logoL h1 {}
+
+.header .inner .logoL h1 a {}
+
+.header .inner .logoL h1 a img {}
+
+.header .inner .utilR {}
+
+.header .inner .utilR ul {}
+
+.header .inner .utilR ul li {}
+
+.header .inner .utilR ul li a {}
+
+
+/* 네비게이션 영역 */
+nav.gnb {}
+
+nav.gnb .inner {}
+
+nav.gnb .inner ul {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+nav.gnb .inner ul li {}
+
+nav.gnb .inner ul li a {}
+
+
+/* 컨테이너 영역 */
+.container {}
+
+.container .inner {}
+
+.container .inner .slide {}
+
+.container .inner .slide a {}
+
+.container .inner .slide a img {}
+
+
+
+.container .inner .main_area {}
+
+.container .inner .main_area ul {}
+
+.container .inner .main_area ul li {}
+
+.container .inner .main_area ul li a {}
+
+.container .inner .main_area ul li a span {}
+
+.container .inner .main_area ul li a span img {}
+
+.container .inner .main_area ul li strong {}
+
+.container .inner .main_area ul li p {}
