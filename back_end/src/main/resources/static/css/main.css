@@ -30,8 +30,6 @@
 /* 네비게이션 영역 */
 nav.gnb {
     width: 100%;
-    padding: 20px 0;
-
 }
 
 nav.gnb .inner {
@@ -48,7 +46,10 @@ nav.gnb .inner ul li {
     align-self: center;
 }
 
-nav.gnb .inner ul li a {}
+nav.gnb .inner ul li a {
+    display: block;
+    padding: 20px 40px;
+}
 
 
 /* 컨테이너 영역 */
@@ -66,7 +67,7 @@ nav.gnb .inner ul li a {}
 }
 
 .container .inner .slide a img {
-    width: 1000px;
+    /* width: 1000px; */
     height: 800px;
 }
 
