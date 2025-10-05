@@ -38,7 +38,7 @@ public class BoardServiceImpl implements BoardService{
 
         int result = boardMapper.insert(board);
         return result;
-        
+
     }
 
     @Override
@@ -56,6 +56,5 @@ public class BoardServiceImpl implements BoardService{
         return result;
 
     }
-    
-    
+
 }

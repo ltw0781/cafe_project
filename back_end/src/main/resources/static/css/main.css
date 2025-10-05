@@ -6,47 +6,60 @@
 
 
 /* 헤더 영역 */
-.header {}
-
-.header .inner {}
-
-.header .inner .logoL {}
-
-.header .inner .logoL h1 {}
-
-.header .inner .logoL h1 a {}
-
-.header .inner .logoL h1 a img {}
-
-.header .inner .utilR {}
-
-.header .inner .utilR ul {}
-
-.header .inner .utilR ul li {}
-
-.header .inner .utilR ul li a {}
-
-
-/* 네비게이션 영역 */
-nav.gnb {
+.header {
     width: 100%;
 }
 
-nav.gnb .inner {
+.header .inner {}
+
+.header .inner .header_top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.header .inner .header_top .logoL {}
+
+.header .inner .header_top .logoL h1 {}
+
+.header .inner .header_top .logoL h1 a {}
+
+.header .inner .header_top .logoL h1 a img {
+    height: 80px;
+}
+
+.header .inner .header_top .utilR {}
+
+.header .inner .header_top .utilR ul {
+    flex-direction: row;
+    align-self: center;
+    gap: 20px;
+}
+
+.header .inner .header_top .utilR ul li {}
+
+.header .inner .header_top .utilR ul li a {}
+
+.header nav.gnb {
+    width: 100%;
+}
+
+.header nav.gnb .inner {
     background-color: yellow;
 }
 
-nav.gnb .inner ul {
+.header nav.gnb .inner ul {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
 }
 
-nav.gnb .inner ul li {
+.header nav.gnb .inner ul li {
     align-self: center;
 }
 
-nav.gnb .inner ul li a {
+.header nav.gnb .inner ul li a {
     display: block;
     padding: 20px 40px;
 }
@@ -59,7 +72,6 @@ nav.gnb .inner ul li a {
 
 .container .inner .slide {
     width: 100%;
-    overflow: hidden;
 }
 
 .container .inner .slide a {
@@ -69,6 +81,7 @@ nav.gnb .inner ul li a {
 .container .inner .slide a img {
     /* width: 1000px; */
     height: 800px;
+
 }
 
 
