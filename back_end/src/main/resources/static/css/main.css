@@ -16,6 +16,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 20px 0;
 }
 
@@ -25,15 +26,12 @@
 
 .header .inner .header_top .logoL h1 a {}
 
-.header .inner .header_top .logoL h1 a img {
-    height: 80px;
-}
+.header .inner .header_top .logoL h1 a img {}
 
 .header .inner .header_top .utilR {}
 
 .header .inner .header_top .utilR ul {
-    flex-direction: row;
-    align-self: center;
+    display: flex;
     gap: 20px;
 }
 
@@ -86,11 +84,18 @@
 
 
 
-.container .inner .main_area {}
+.container .inner .main_area {
+    padding: 20px 0;
+}
 
-.container .inner .main_area ul {}
+.container .inner .main_area ul {
+    display: flex;
 
-.container .inner .main_area ul li {}
+}
+
+.container .inner .main_area ul li {
+    width: 100%;
+}
 
 .container .inner .main_area ul li a {}
 
@@ -98,6 +103,8 @@
 
 .container .inner .main_area ul li a span img {}
 
-.container .inner .main_area ul li strong {}
+.container .inner .main_area ul li strong {
+    display: block;
+}
 
 .container .inner .main_area ul li p {}
