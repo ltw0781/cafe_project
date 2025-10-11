@@ -4,6 +4,11 @@
     margin: 0 auto;
 }
 
+h3.title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 
 /* 헤더 영역 */
 .header {
@@ -12,7 +17,9 @@
 
 .header {}
 
-.header .header_top {}
+.header .header_top {
+    width: 100%;
+}
 
 .header .header_top .inner {
     display: flex;
@@ -39,7 +46,11 @@
 
 .header .header_top .inner .utilR ul li a {}
 
-.header nav.gnb {}
+.header nav.gnb {
+    width: 100%;
+    background-color: #ccc;
+    padding: 20px 0;
+}
 
 .header nav.gnb .inner {}
 
@@ -51,65 +62,117 @@
 
 .header nav.gnb .inner ul li {}
 
-.header nav.gnb .inner ul li a {}
+.header nav.gnb .inner ul li a {
+    text-align: center;
+}
 
 
 /* 컨테이너 영역 */
 .container {}
 
-.container .inner {}
-
-.container .inner .slide {
+.container .slide {
     width: 100%;
+    padding-bottom: 20px;
 }
 
-.container .inner .slide a {
+.container .slide .inner {
+}
+
+.container .slide .inner a {
     display: block;
 }
 
-.container .inner .slide a img {
+.container .slide .inner a img {
     width: 100%;
+    height: 600px;
+    object-fit: cover;
 }
 
-.container .inner .main_area {
+.container .board_area {
+    background-color: #ccc;
+    padding: 10px 0;
+}
+
+.container .board_area .inner {
+    display: flex;
+    gap: 10px;
+
+}
+
+.container .board_area .inner .news {
+    width: 50%;
+}
+
+.container .board_area .inner .news ul {}
+
+.container .board_area .inner .news ul li {
+    padding: 5px 0;
+}
+
+.container .board_area .inner .news ul li a {}
+
+.container .board_area .inner .board {
+    width: 50%;
+}
+
+.container .board_area .inner .board ul {}
+
+.container .board_area .inner .board ul li {
+    padding: 5px 0;
+}
+
+.container .board_area .inner .board ul li a {}
+
+
+
+.container .main_area {}
+
+.container .main_area .inner {
     padding: 20px 0;
 }
 
-.container .inner .main_area ul {
+.container .main_area .inner ul {
     display: flex;
+    gap: 10px;
 
 }
 
-.container .inner .main_area ul li {
+.container .main_area .inner ul li {
     width: 100%;
-    text-align: center;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 
-.container .inner .main_area ul li a {}
+.container .main_area .inner ul li a {
+    padding-bottom: 3px;
+}
 
-.container .inner .main_area ul li a span {
+.container .main_area .inner ul li a span {
     display: block;
 }
 
-.container .inner .main_area ul li a span img {
+.container .main_area .inner ul li a span img {
     width: 100%;
 }
 
-.container .inner .main_area ul li strong {
-    display: inline;
-}
-
-.container .inner .main_area ul li p.price {
+.container .main_area .inner ul li strong {
     display: inline-block;
+    padding-bottom: 3px;
 }
 
-.container .inner .main_area ul li p {}
+.container .main_area .inner ul li p.price {
+    padding-bottom: 3px;
+}
+
+.container .main_area .inner ul li p {}
 
 
 /* 푸터영역 */
 
-footer.footer {}
+footer.footer {
+    background-color: #ccc;
+    padding-top: 20px;
+}
 
 footer.footer .inner {}
 
