@@ -10,57 +10,48 @@
     width: 100%;
 }
 
-.header .inner {}
+.header {}
 
-.header .inner .header_top {
-    width: 100%;
+.header .header_top {}
+
+.header .header_top .inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
-.header .inner .header_top .logoL {}
+.header .header_top .inner .logoL {}
 
-.header .inner .header_top .logoL h1 {}
+.header .header_top .inner .logoL h1 {}
 
-.header .inner .header_top .logoL h1 a {}
+.header .header_top .inner .logoL h1 a {}
 
-.header .inner .header_top .logoL h1 a img {}
+.header .header_top .inner .logoL h1 a img {}
 
-.header .inner .header_top .utilR {}
+.header .header_top .inner .utilR {}
 
-.header .inner .header_top .utilR ul {
+.header .header_top .inner .utilR ul {
     display: flex;
     gap: 20px;
 }
 
-.header .inner .header_top .utilR ul li {}
+.header .header_top .inner .utilR ul li {}
 
-.header .inner .header_top .utilR ul li a {}
+.header .header_top .inner .utilR ul li a {}
 
-.header nav.gnb {
-    width: 100%;
-}
+.header nav.gnb {}
 
-.header nav.gnb .inner {
-    background-color: yellow;
-}
+.header nav.gnb .inner {}
 
 .header nav.gnb .inner ul {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;
+    align-items: center;
 }
 
-.header nav.gnb .inner ul li {
-    align-self: center;
-}
+.header nav.gnb .inner ul li {}
 
-.header nav.gnb .inner ul li a {
-    display: block;
-    padding: 20px 40px;
-}
+.header nav.gnb .inner ul li a {}
 
 
 /* 컨테이너 영역 */
@@ -77,12 +68,8 @@
 }
 
 .container .inner .slide a img {
-    /* width: 1000px; */
-    height: 800px;
-
+    width: 100%;
 }
-
-
 
 .container .inner .main_area {
     padding: 20px 0;
@@ -95,16 +82,66 @@
 
 .container .inner .main_area ul li {
     width: 100%;
+    text-align: center;
+    padding: 0 20px;
 }
 
 .container .inner .main_area ul li a {}
 
-.container .inner .main_area ul li a span {}
-
-.container .inner .main_area ul li a span img {}
-
-.container .inner .main_area ul li strong {
+.container .inner .main_area ul li a span {
     display: block;
 }
 
+.container .inner .main_area ul li a span img {
+    width: 100%;
+}
+
+.container .inner .main_area ul li strong {
+    display: inline;
+}
+
+.container .inner .main_area ul li p.price {
+    display: inline-block;
+}
+
 .container .inner .main_area ul li p {}
+
+
+/* 푸터영역 */
+
+footer.footer {}
+
+footer.footer .inner {}
+
+footer.footer .inner .foot_top {}
+
+footer.footer .inner .foot_top ul.foot_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer.footer .inner .foot_top ul.foot_menu li {}
+
+footer.footer .inner .foot_top ul.foot_menu li a {}
+
+footer.footer .inner .foot_top .mark {
+    text-align: center;
+}
+
+footer.footer .inner .foot_top .mark a {}
+
+footer.footer .inner .foot_top .mark a img {}
+
+footer.footer .inner .foot_top .address {}
+
+footer.footer .inner .address address {
+    text-align: center;
+}
+
+footer.footer .inner .copy_r {}
+
+footer.footer .inner .copy_r p {
+    text-align: center;
+}
