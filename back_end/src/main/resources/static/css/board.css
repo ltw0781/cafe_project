@@ -1,0 +1,56 @@
+/* 공통 영역 */
+h1 {
+    font-size: 30px;
+}
+
+
+/* 컨테이너 영역 */
+
+.container {}
+
+.container .inner {}
+
+.container .inner h1 {
+    padding-top: 30px;
+}
+
+.container .inner a.created {
+    width: 80px;
+    padding: 10px 0;
+    font-weight: bold;
+    display: block;
+    background-color: #ccc;
+    color: azure;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container .inner table {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.container .inner table thead {}
+
+.container .inner table thead tr {}
+
+.container .inner table thead tr th {
+    padding: 5px 0;
+}
+
+.container .inner table tbody {
+    width: 100%;
+}
+
+.container .inner table tbody tr {}
+
+.container .inner table tbody tr td {
+    border-top: 1px solid #ccc;
+}
+
+.textc {
+    padding: 5px 0;
+    text-align: center;
+}

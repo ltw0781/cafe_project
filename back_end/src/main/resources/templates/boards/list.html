@@ -5,54 +5,74 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/board.css">
     <title>게시판 리스트</title>
 </head>
 
 <body>
     <header class="header">
-        <div class="logoL">
-            <h1 class="logo"><a href="/"><img src="" alt="로고 이미지"></a></h1>
+        <div class="header_top">
+            <div class="inner">
+                <div class="logoL">
+                    <h1 class="logo"><a href="#none"><img src="/images/logo.png" alt="로고 이미지"></a></h1>
+                </div>
+                <div class="utilR">
+                    <ul>
+                        <li><a href="#none">관리자</a></li>
+                        <li><a href="#none">로그인</a></li>
+                        <li><a href="#none">로그아웃</a></li>
+                        <li><a href="#none">마이페이지</a></li>
+                        <li><a href="#none">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="utilR">
-            <ul>
-                <li><a href="#none">로그인</a></li>
-                <li><a href="#none">마이페이지</a></li>
-                <li><a href="#none">고객센터</a></li>
-            </ul>
-        </div>
+
+        <!-- 네비게이션 -->
+        <nav class="gnb">
+            <div class="inner">
+                <ul>
+                    <li><a href="#none">소개페이지</a></li>
+                    <li><a href="#none">메뉴소개</a></li>
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="/boards/list">게시판</a></li>
+                    <li><a href="#none">Q&A</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <nav class="gnb">
-        <ul>
-            <li><a href="#none">소개페이지</a></li>
-            <li><a href="#none">메뉴소개</a></li>
-            <li><a href="#none">공지사항</a></li>
-            <li><a href="/boards/list">게시판</a></li>
-            <li><a href="#none">Q&A</a></li>
-        </ul>
-    </nav>
+
+    <!-- 컨테이너 영역 -->
     <div class="container">
-        <h1 class="board_title">게시판 리스트</h1>
-        <a href="/boards/insert">글쓰기</a>
-        <table style="border: 10px solid #ccc;">
-            <thead>
-                <tr>
-                    <th>번호</th>
-                    <th>제목</th>
-                    <th>작성자</th>
-                    <th>작성일</th>
-                    <th>수정일</th>
-                </tr>
-            </thead>
-            <th:block th:each="board : ${boardList}">
-                <tr>
-                    <td th:text="${board.no}"></td>
-                    <td><a th:href="|/boards/read?no=${board.no}|" th:text="${board.title}"></a></td>
-                    <td th:text="${board.writer}"></td>
-                    <td th:text="${#dates.format(board.createdAt, 'yyyy-MM-dd')}"></td>
-                    <td th:text="${#dates.format(board.updatedAt, 'yyyy-MM-dd')}"></td>
-                </tr>
-            </th:block>
-        </table>
+        <div class="inner">
+            <h1>게시판 리스트</h1>
+            <a class="created" href="/boards/insert">글쓰기</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                        <th>수정일</th>
+                        <th>조회수</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <th:block th:each="board : ${boardList}">
+                        <tr>
+                            <td class="textc" th:text="${board.no}"></td>
+                            <td class="textc"><a th:href="|/boards/read?no=${board.no}|" th:text="${board.title}"></a></td>
+                            <td class="textc" th:text="${board.writer}"></td>
+                            <td class="textc" th:text="${#dates.format(board.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                            <td class="textc" th:text="${#dates.format(board.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
+                            <td class="textc">1</td>
+                        </tr>
+                    </th:block>
+                </tbody>
+            </table>
+        </div>
     </div>
 
 </body>
