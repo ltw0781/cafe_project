@@ -68,12 +68,30 @@ td.textc {
 
 .createds .inner .insertInput form {
     display: flex;
+    flex-direction: column;
 }
 
-.createds .inner .insertInput form p {
-    display: block;
-}
+.createds .inner .insertInput form p {}
 
+.updateds .inner .updateInput form p input,
+.reads .inner .readInput form p input,
 .createds .inner .insertInput form p input {
-    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.updateds .inner .updateInput form .btnarea button,
+.reads .inner .readInput form .btnarea button,
+.createds .inner .insertInput form p button {
+    width: 120px;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    font-weight: bold;
+    background-color: #ccc;
+    color: azure;
+    border: none;
+    cursor: pointer;
 }

@@ -1,39 +1,65 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/board.css">
     <title>Document</title>
 </head>
+
 <body>
-<h1>게시글 수정</h1>
-    <form id="form" action="/boards/update" method="post">
-        <input type="hidden" name="no" id="no" th:value="${board.no}">
-        <table>
-            <tr>
-                <td>제목</td>
-                <td>
-                    <input type="text" id="title" name="title" th:value="${board.title}">
-                </td>
-            </tr>
-            <tr>
-                <td>작성자</td>
-                <td>
-                    <input type="text" id="writer" name="writer" th:value="${board.writer}">
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <input type="text" id="content" name="content" th:value="${board.content}">
-                </td>
-            </tr>
-        </table>
-        <div>
-            <button type="button" onclick="actionDelete()">삭제</button>
-            <button type="submit">수정</button>
-            <button type="button" onclick="moveList()">목록</button>
+    <header class="header">
+        <div class="header_top">
+            <div class="inner">
+                <div class="logoL">
+                    <h1 class="logo"><a href="/"><img src="/images/logo.png" alt="로고 이미지"></a></h1>
+                </div>
+                <div class="utilR">
+                    <ul>
+                        <li><a href="#none">관리자</a></li>
+                        <li><a href="#none">로그인</a></li>
+                        <li><a href="#none">로그아웃</a></li>
+                        <li><a href="#none">마이페이지</a></li>
+                        <li><a href="#none">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </form>
+
+        <!-- 네비게이션 -->
+        <nav class="gnb">
+            <div class="inner">
+                <ul>
+                    <li><a href="#none">소개페이지</a></li>
+                    <li><a href="#none">메뉴소개</a></li>
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="/boards/list">게시판</a></li>
+                    <li><a href="#none">Q&A</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="updateds">
+        <div class="inner">
+            <h1>게시글 수정</h1>
+            <div class="updateInput">
+                <form id="form" action="/boards/update" method="post">
+                    <input type="hidden" name="no" id="no" th:value="${board.no}">
+                    <p>제목<input type="text" id="title" name="title" th:value="${board.title}"></p>
+                    <p>작성자<input type="text" id="writer" name="writer" th:value="${board.writer}"></p>
+                    <p>내용<input type="text" id="content" name="content" th:value="${board.content}"></p>
+                    <div class="btnarea">
+                        <button type="button" onclick="actionDelete()">삭제</button>
+                        <button type="submit">수정</button>
+                        <button type="button" onclick="moveList()">목록</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script>
         let form = document.getElementById('form')
@@ -47,18 +73,19 @@
 
         function actionDelete() {
 
-            if( !confirm('정말로 삭제하시겠습니까?') )
+            if (!confirm('정말로 삭제하시겠습니까?'))
                 return
-            
+
             form.action = '/boards/delete'   // action 속성 변경
             form.submit()                   // 요청 전송
 
         }
-        
+
 
         function moveList() {
             location.href = '/boards/list'
         }
     </script>
 </body>
+
 </html>
