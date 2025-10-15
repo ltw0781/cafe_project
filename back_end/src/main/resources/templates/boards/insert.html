@@ -1,17 +1,63 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/board.css">
     <title>게시글 작성</title>
 </head>
+
 <body>
-    <h1>게시글 등록</h1>
-    <form action="/boards/insert" method="post">
-        <p>제목<input type="text" id="title" name="title"></p>
-        <p>작성자<input type="text" id="writer" name="writer"></p>
-        <p>내용<input type="text" id="content" name="content"></p>
-        <p><input type="submit" value="등록"></p>
-    </form>
+    <header class="header">
+        <div class="header_top">
+            <div class="inner">
+                <div class="logoL">
+                    <h1 class="logo"><a href="/"><img src="/images/logo.png" alt="로고 이미지"></a></h1>
+                </div>
+                <div class="utilR">
+                    <ul>
+                        <li><a href="#none">관리자</a></li>
+                        <li><a href="#none">로그인</a></li>
+                        <li><a href="#none">로그아웃</a></li>
+                        <li><a href="#none">마이페이지</a></li>
+                        <li><a href="#none">고객센터</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 네비게이션 -->
+        <nav class="gnb">
+            <div class="inner">
+                <ul>
+                    <li><a href="#none">소개페이지</a></li>
+                    <li><a href="#none">메뉴소개</a></li>
+                    <li><a href="#none">공지사항</a></li>
+                    <li><a href="/boards/list">게시판</a></li>
+                    <li><a href="#none">Q&A</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 컨테이너 영역 -->
+
+    <div class="createds">
+        <div class="inner">
+            <h1>게시글 등록</h1>
+            <div class="insertInput">
+                <form action="/boards/insert" method="post">
+                    <p>제목<input type="text" id="title" name="title"></p>
+                    <p>작성자<input type="text" id="writer" name="writer"></p>
+                    <p>내용<input type="text" id="content" name="content"></p>
+                    <p><input type="submit" value="등록"></p>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

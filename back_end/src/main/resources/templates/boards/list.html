@@ -15,7 +15,7 @@
         <div class="header_top">
             <div class="inner">
                 <div class="logoL">
-                    <h1 class="logo"><a href="#none"><img src="/images/logo.png" alt="로고 이미지"></a></h1>
+                    <h1 class="logo"><a href="/"><img src="/images/logo.png" alt="로고 이미지"></a></h1>
                 </div>
                 <div class="utilR">
                     <ul>
@@ -63,7 +63,8 @@
                     <th:block th:each="board : ${boardList}">
                         <tr>
                             <td class="textc" th:text="${board.no}"></td>
-                            <td class="textc"><a th:href="|/boards/read?no=${board.no}|" th:text="${board.title}"></a></td>
+                            <td class="textc"><a th:href="|/boards/read?no=${board.no}|" th:text="${board.title}"></a>
+                            </td>
                             <td class="textc" th:text="${board.writer}"></td>
                             <td class="textc" th:text="${#dates.format(board.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
                             <td class="textc" th:text="${#dates.format(board.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
@@ -74,6 +75,29 @@
             </table>
         </div>
     </div>
+
+    <!-- 푸터영역 -->
+    <footer class="footer">
+        <div class="inner">
+            <div class="foot_top">
+                <ul class="foot_menu">
+                    <li><a href="#none">개인정보처리방침저작권</a></li>
+                    <li><a href="#none">정책영상정보처리기기 운영 관리방침</a></li>
+                    <li><a href="#none">홈페이지 바로잡기</a></li>
+                    <li><a href="#none">행정서비스 헌장</a></li>
+                </ul>
+                <div class="mark">
+                    <a href="#none"><img src="images/mark.png" alt="과학기술정보통신부 WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)"></a>
+                </div>
+            </div>
+            <div class="address">
+                <address>(우) 07789 서울 강서구 마곡동로 161 서울식물원</address>
+            </div>
+            <div class="copy_r">
+                <p>Copyright©Seoul Metropolitan Government all rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

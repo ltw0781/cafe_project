@@ -1,8 +1,13 @@
 /* 공통 영역 */
-h1 {
+.inner>h1 {
     font-size: 30px;
+    padding: 50px 0;
 }
 
+td.textc {
+    padding: 5px 0;
+    text-align: center;
+}
 
 /* 컨테이너 영역 */
 
@@ -10,9 +15,7 @@ h1 {
 
 .container .inner {}
 
-.container .inner h1 {
-    padding-top: 30px;
-}
+.container .inner h1 {}
 
 .container .inner a.created {
     width: 80px;
@@ -21,7 +24,6 @@ h1 {
     display: block;
     background-color: #ccc;
     color: azure;
-    margin-top: 40px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -29,7 +31,7 @@ h1 {
 
 .container .inner table {
     width: 100%;
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 .container .inner table thead {}
@@ -38,6 +40,7 @@ h1 {
 
 .container .inner table thead tr th {
     padding: 5px 0;
+    font-size: 1.2rem;
 }
 
 .container .inner table tbody {
@@ -50,7 +53,27 @@ h1 {
     border-top: 1px solid #ccc;
 }
 
-.textc {
-    padding: 5px 0;
-    text-align: center;
+
+/* 글쓰기 영역 */
+
+.createds {
+    width: 100%;
+}
+
+.createds .inner {}
+
+.createds .inner h1 {}
+
+.createds .inner .insertInput {}
+
+.createds .inner .insertInput form {
+    display: flex;
+}
+
+.createds .inner .insertInput form p {
+    display: block;
+}
+
+.createds .inner .insertInput form p input {
+    display: block;
 }
