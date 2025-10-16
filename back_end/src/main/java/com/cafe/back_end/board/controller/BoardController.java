@@ -8,12 +8,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.cafe.back_end.board.dto.Board;
 import com.cafe.back_end.board.service.BoardService;
+import com.cafe.back_end.common.Page;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 
@@ -32,10 +33,13 @@ public class BoardController {
      * @throws Exception
      */
     @GetMapping("/list")
-    public void list(Model model) throws Exception {
+    public void list(Model model, Page page) throws Exception {
 
-        List<Board> boardList = boardService.list();
+        log.info("page : " + page);
+
+        List<Board> boardList = boardService.list(page);
         model.addAttribute("boardList", boardList);
+        model.addAttribute("page", page);
         
     }
     
@@ -48,6 +52,8 @@ public class BoardController {
      */
     @GetMapping("/read")
     public String read(@RequestParam("no") int no, Model model) throws Exception {
+
+        boardService.updateViewCount(no); // 조회수 증가
 
         Board board = boardService.select(no);
         model.addAttribute("board", board);

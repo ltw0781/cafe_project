@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/board.css">
+    <link rel="stylesheet" href="/css/common.css">
     <title>게시판 리스트</title>
 </head>
 
@@ -68,11 +68,49 @@
                             <td class="textc" th:text="${board.writer}"></td>
                             <td class="textc" th:text="${#dates.format(board.createdAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
                             <td class="textc" th:text="${#dates.format(board.updatedAt, 'yyyy-MM-dd HH:mm:ss')}"></td>
-                            <td class="textc">1</td>
+                            <td class="textc" th:text="${board.viewCount}"></td>
                         </tr>
                     </th:block>
                 </tbody>
             </table>
+            <!-- 페이지네이션 -->
+            <nav class="paging" aria-label="Page navigation example">
+                <div class="pagination">
+                    <ul>
+                        <li>
+                            <!-- [처음] -->
+                            <a th:href="|/boards/list?page=${page.first}|">&lt;&lt;</a>
+                        </li>
+                        <li>
+                            <!-- [ 이전 ] -->
+                            <th:block th:if="${page.page != page.first}"><a
+                                    th:href="|/boards/list?page=${page.prev}|">&lt;</a>
+                            </th:block>
+                        </li>
+                        <li>
+                            <!-- [페이지 번호]-->
+                            <!-- #numbers.sequence(시작번호, 끝번호) : 시작번호 부터 끝번호까지 번호 리스트를 생성 -->
+                            <th:block th:each="no : ${#numbers.sequence(page.start, page.last)}">
+                                <!-- 현재 페이지 -->
+                                <th:block th:if="${page.page == no}"><b><span th:text="${no}"></span></b></th:block>
+                                <th:block th:if="${page.page != no}"><a th:href="|/boards/list?page=${no}|"
+                                        th:text="${no}"></a></th:block>
+                            </th:block>
+                        </li>
+                        <li>
+                            <!-- [ 다음 ] -->
+                            <th:block th:if="${page.page != page.last}"><a
+                                    th:href="|/boards/list?page=${page.next}|">&gt;</a>
+                            </th:block>
+                        </li>
+                        <li>
+                            <!-- [마지막] -->
+                            <a th:href="|/boards/list?page=${page.last}|">&gt;&gt;</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- 페이지 네이션-->
         </div>
     </div>
 

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.cafe.back_end.board.dto.Board;
 import com.cafe.back_end.board.mapper.BoardMapper;
+import com.cafe.back_end.common.Page;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -18,9 +19,13 @@ public class BoardServiceImpl implements BoardService{
     private BoardMapper boardMapper;
 
     @Override
-    public List<Board> list() throws Exception {
+    public List<Board> list(Page page) throws Exception {
 
-        List<Board> boardList = boardMapper.list();
+        int total = boardMapper.count(page);
+        page.setTotal(total);
+
+        List<Board> boardList = boardMapper.list(page);
+
         return boardList;
 
     }
@@ -55,6 +60,11 @@ public class BoardServiceImpl implements BoardService{
         int result = boardMapper.delete(no);
         return result;
 
+    }
+
+    @Override
+    public int updateViewCount(int no) throws Exception {
+        return boardMapper.updateViewCount(no);
     }
 
 }

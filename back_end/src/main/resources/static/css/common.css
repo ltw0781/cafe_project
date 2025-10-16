@@ -1,0 +1,129 @@
+/* 공통영역 */
+
+.inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h3.title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+nav.paging {}
+
+nav.paging .pagination {}
+
+nav.paging .pagination ul {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+nav.paging .pagination ul li {}
+
+nav.paging .pagination ul li a {}
+
+
+/* 헤더 영역 */
+.header {
+    width: 100%;
+}
+
+.header {}
+
+.header .header_top {
+    width: 100%;
+}
+
+.header .header_top .inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.header .header_top .inner .logoL {}
+
+.header .header_top .inner .logoL h1 {}
+
+.header .header_top .inner .logoL h1 a {}
+
+.header .header_top .inner .logoL h1 a img {}
+
+.header .header_top .inner .utilR {}
+
+.header .header_top .inner .utilR ul {
+    display: flex;
+    gap: 20px;
+}
+
+.header .header_top .inner .utilR ul li {}
+
+.header .header_top .inner .utilR ul li a {}
+
+.header nav.gnb {
+    width: 100%;
+    background-color: #ccc;
+    padding: 20px 0;
+}
+
+.header nav.gnb .inner {}
+
+.header nav.gnb .inner ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header nav.gnb .inner ul li {}
+
+.header nav.gnb .inner ul li a {
+    text-align: center;
+}
+
+
+
+/* 푸터영역 */
+
+footer.footer {
+    background-color: #ccc;
+    padding-top: 20px;
+}
+
+footer.footer .inner {}
+
+footer.footer .inner .foot_top {}
+
+footer.footer .inner .foot_top ul.foot_menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+footer.footer .inner .foot_top ul.foot_menu li {}
+
+footer.footer .inner .foot_top ul.foot_menu li a {}
+
+footer.footer .inner .foot_top .mark {
+    text-align: center;
+}
+
+footer.footer .inner .foot_top .mark a {}
+
+footer.footer .inner .foot_top .mark a img {}
+
+footer.footer .inner .foot_top .address {}
+
+footer.footer .inner .address address {
+    text-align: center;
+}
+
+footer.footer .inner .copy_r {}
+
+footer.footer .inner .copy_r p {
+    text-align: center;
+}
